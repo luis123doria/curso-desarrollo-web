@@ -98,3 +98,77 @@ h5 {
 
 ------
 
+## Commit 2 - v0.2
+
+### Tabla de Cambios
+
+| Archivos Nuevos | Archivos Editados         |
+| --------------- | ------------------------- |
+| None            | index.html<br />index.css |
+
+### Cambios 
+
+Se añadió la estructura en HTML del header y el nav, asi como sus estilos CSS
+
+* HTML:
+
+```html
+<header class="header">
+		<a href="index.html">
+			<img class="header__logo" src="img/logo.png" alt="Logotipo">
+		</a>
+	</header>
+
+	<nav class="nav">
+		<a class="nav__link nav__link--active" href="#">Inicio</a>
+		<a class="nav__link nav__link--active" href="#">Nosotros</a>
+	</nav>
+```
+
+* CSS:
+
+```css
+/* Header */
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.header__logo {
+	margin: 2rem 0; 
+}
+
+/* Nav */
+
+/* Clase de Bloque */
+.nav {
+	background-color: var(--secondary);
+	padding: 0.5rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+/* Clase de Elemento */
+.nav__link {
+	color: var(--white);
+	font-size: 1.563rem;
+	font-weight: 900;
+}
+
+/* Clase de Modificador */
+.nav__link:hover,
+.nav__link--active {
+	color: var(--primary);
+}
+```
+
+Cómo se puede apreciar hemos usado la metodología BEM (Block, Element, Modifier) al proyecto.
+
+* Para los bloques, las clases deben ser nombres cortos de 1 ó 2 palabras.
+* Para los elementos, las clases deben tener el nombre del bloque padre que contiene al elemento, seguido de 2 guiones bajos (__) y el nombre del elemento.
+* Para los modificadores, las clases deben tener el nombre del elemento, seguido de 2 guiones (--) y el nombre del modificador.
+
+------
+
