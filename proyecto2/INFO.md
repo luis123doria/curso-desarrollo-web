@@ -188,3 +188,123 @@ También añadimos estilos al Footer
 
 ------
 
+## Commit 4 - v0.4
+
+### Tabla de Cambios
+
+| Archivos Nuevos | Archivos Editados         |
+| --------------- | ------------------------- |
+| None            | index.html<br />index.css |
+
+### Cambios
+
+Se añadió el Grid para los productos y unas imagenes en index.html
+
+* Estructura de cada producto en HTML:
+
+```html
+<main class="container">
+	<h1>Nuestras Camisas</h1>
+
+	<div class="grid">
+		<div class="product">
+			<a href="product.html">
+				<img class="product__img" src="img/1.jpg" alt="Imagen Camisa">
+				<div class="product__info">
+					<p class="product__name">VueJs</p>
+					<p class="product__prize">$10</p>
+				</div>
+			</a>
+		</div> <!-- Fin de la Clase product -->
+        
+        <div class="grafico grafico--camisas">
+        </div>
+    </div>
+</main>
+```
+
+* Estilos del grid en CSS:
+
+```css
+/* Grid */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+@media (min-width: 768px){
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+```
+
+* Estilos del producto en CSS:
+
+```css
+/* Productos */
+
+.product {
+	background-color: var(--secondary);
+	padding: 0.5rem;
+}
+
+.product__img {
+	width: 100%;
+}
+
+.product__info {
+
+}
+
+.product__name {
+	font-size: 1.953rem;
+	color: var(--white);
+}
+
+.product__prize {
+	font-size: 1.25rem;
+	color: var(--primary);
+}
+
+.product__name, .product__prize {
+	margin: 0;
+	text-align: center;
+}
+```
+
+* Estilos del Grafico en CSS:
+
+```css
+/* Graficos */
+
+.grafico {
+	min-height: 30rem;
+	background-repeat: no-repeat;
+	background-size: cover;  
+	grid-column: 1 / 3;
+}
+
+.grafico--camisas {
+	grid-row: 2 / 3;
+	background-image: url("../img/grafico1.jpg");
+}
+
+.grafico--node {
+	background-image: url("../img/grafico2.jpg");
+	grid-row: 8 / 9;
+}
+
+@media (min-width: 768px){
+	.grafico--node {
+		grid-row: 5 / 6;
+		grid-column: 2 / 4;
+	}
+}
+```
+
+------
+
