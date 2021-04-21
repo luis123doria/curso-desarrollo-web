@@ -172,3 +172,19 @@ Cómo se puede apreciar hemos usado la metodología BEM (Block, Element, Modifie
 
 ------
 
+## Commit 3 - v0.3
+
+### Tabla de Cambios
+
+| Archivos Nuevos              | Archivos Editados                                            |
+| ---------------------------- | ------------------------------------------------------------ |
+| about.html<br />product.html | index.html<br />about.html<br />product.html<br />index.css<br /> |
+
+### Cambios
+
+Se crearon 2 .html nuevos para las páginas del about y los productos.
+
+También añadimos estilos al Footer
+
+------
+
