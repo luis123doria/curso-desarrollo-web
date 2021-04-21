@@ -413,3 +413,60 @@ Creada tambien la lista de los beneficios de comprar con nosotros
 
 ------
 
+## Commit 6 - v0.6
+
+### Tabla de Cambios
+
+| Archivos Nuevos | Archivos Editados                           |
+| --------------- | ------------------------------------------- |
+| None            | index.html<br />product.html<br />index.css |
+
+### Cambios
+
+Se terminó de agregar el estilo CSS a la página de productos
+
+```css
+/* Pagina del Producto */
+
+@media (min-width: 768px){
+	.shirt {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1rem;
+	}
+}
+
+.form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+
+}
+
+.form__camp {
+	border: 0.125rem solid var(--darkPrimary);
+	background-color: transparent;
+	padding: 0.5rem;
+	color: var(--white);
+	appearance: none;
+}
+
+.form__submit {
+	background-color: var(--primary);
+	border: none;
+	font-size: 1rem;
+	padding: 1rem;
+	transition: background-color 0.2s ease;
+	grid-column: 1 / 3; 
+}
+
+.form__submit:hover {
+	cursor: pointer;
+	background-color: var(--darkPrimary);
+}
+```
+
+Con esto hemos terminado el proyecto 2.
+
+------
+
