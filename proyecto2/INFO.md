@@ -308,3 +308,108 @@ Se añadió el Grid para los productos y unas imagenes en index.html
 
 ------
 
+## Commit 5 - v0.5
+
+### Tabla de Cambios 
+
+| Archivos Nuevos | Archivos Editados         |
+| --------------- | ------------------------- |
+| None            | about.html<br />index.css |
+
+### Cambios
+
+Creado el contenido de la página de About
+
+* Estructura HTML para la info principal:
+
+```html
+<main class="container">
+	<h1>Nosotros</h1>
+
+	<div class="about">
+		<div class="about__text">
+			<p>	Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure modi nihil laborum perferendis? Officia doloribus veritatis, voluptas ducimus quas consequatur libero dolorem accusantium velit molestias unde maxime nihil tempore quos dignissimos harum, quaerat laudantium. Molestiae tempore, dolor amet ab?
+			Lorem ipsum dolor sit amet.
+			</p>
+		</div>
+		<img class="about__img" src="img/nosotros.jpg" alt="">			
+	</div>	
+</main>
+```
+
+* Estilos CSS para la info principal:
+
+```css
+/* About Us Page */
+
+.about {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media (min-width: 768px){
+	.about {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.about__img {
+		grid-column: 2 / 3;
+	}
+}
+
+.about__img {
+	grid-row: 1 / 2;
+}
+
+.about__text {
+	text-align: left;
+}
+```
+
+Creada tambien la lista de los beneficios de comprar con nosotros
+
+* Estructura de los bloques y del bloque individual en HTML:
+
+```html
+<section class="container get">
+	<h2 class="get__title"> ¿Por qué preferirnos?</h2>
+		
+	<div class="blocks">
+		<div class="block">
+			<img class="block__img" src="img/icono_1.png" alt=" Porque comprar">
+			<h3 class="block__title">Precio</h3>
+			<p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Fugit, reprehenderit.</p>
+		</div> <!-- Bloque -->	
+    </div> <!-- Bloques -->
+</section>
+```
+
+* Estilos de los bloques y del bloque individual en CSS:
+
+```css
+/* Bloques */
+
+.blocks {
+	display: grid;
+	gap: 1rem;
+}
+
+@media (min-width: 768px){
+	.blocks {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.block {
+	text-align: center;
+}
+
+
+.block__title {
+	margin: 0;
+}
+```
+
+------
+
