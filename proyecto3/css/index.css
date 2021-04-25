@@ -1,0 +1,319 @@
+/* Variables Globales */
+
+:root {
+  --headingFont: "Playfair Display";
+  --bodyFont: "Sora";
+
+  --white: #FEFCF0;
+  --black: #000624;
+  --gray: #787875;
+
+  --lightenPrimary: #FEEFA5;
+  --primary: #FCDC3D;
+  --darkenPrimary: #DEBE1B;
+
+  --lightenSecondary: #7D8FFE;
+  --secondary: #304DF0;
+  --darkenSecondary: #001796;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; /*16px*/
+} 
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--white);
+  font-family: var(--bodyFont);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--black);
+}
+
+.container {
+  max-width: 120rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--headingFont);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+a {text-decoration: none;}
+
+img {max-width: 100%;}
+
+/* Utilities */
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-1rem {
+  margin: 1rem 0 1rem 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.center-text-align {
+  text-align: center;
+}
+
+/* Header */
+
+.no-webp .header {
+  background-image: url("../img/banner.webp");
+}
+
+.header {
+  background-image: url("../img/banner.jpg");
+  height: 25rem;
+  back  ground-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 768px){
+  .header {
+    height: 20rem;
+  }
+}
+
+.header__text {
+  text-align: center;
+  color: var(--white);
+  margin: 3rem 0;
+}
+
+@media (min-width: 768px){
+  .header__text {
+    margin-top: 6rem;
+  }
+}
+
+.bar {
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px){
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  color: var(--white);
+}
+
+.logo__name {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.logo__bold {
+  font-weight: 700;
+} 
+
+@media (min-width: 768px){
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.nav__link {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+/* Blog */ 
+
+.main-content {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px){
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+  }
+}
+
+.blog__title {
+  margin-top: 0;
+}
+
+.entry {
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2.5rem;
+}
+
+.entry:last-of-type{
+  border: none;
+  margin: 0;
+}
+
+.button {
+  display: block;
+  font-family: var(bodyFont);
+  color: var(--white);
+  text-align: center;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 2rem;
+
+}
+
+@media (min-width: 768px){
+  .button {
+    display: inline-block;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.primary--button {
+background-color: var(--black);
+}
+
+.secondary--button {
+  background-color: var(--darkenPrimary);
+}
+
+.course {
+  list-style: none;
+}
+
+.widget {
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2.5rem;
+}
+
+.widget:last-of-type {
+  border: none;
+  margin-bottom: none;
+}
+
+.widget__label,
+.curso__label {
+  font-weight: 500;
+}
+
+.widget__info,
+.curso__info {
+  font-weight: 200;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: var(--black);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* About */
+
+@media (min-width: 768px){
+  .about {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .about__img,
+  .about__text {
+    flex-basis: 50%;
+  }
+}
+
+/* Cursos */
+
+.curso {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+@media (min-width: 768px){
+  .curso {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+.curso:last-of-type{
+  border: none;
+}
+
+/* Contacto */
+
+.contacto-bg {
+  background-image: url("../img/contacto.jpg");
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.form {
+  background-color: var(--white);
+  margin: -10rem auto 0 auto;
+  width: 90%;
+  padding: 2rem;
+}
+
+.camp {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.camp__label {
+  flex: 0 0 5rem; 
+  text-align: right;
+}
+
+.camp__field {
+  flex: 1;
+  border: 1px solid var(--gray);
+}
+
+.camp__field--textarea {
+  height: 10rem;
+}
