@@ -94,7 +94,7 @@ img {max-width: 100%;}
 .header {
   background-image: url("../img/banner.jpg");
   height: 25rem;
-  back  ground-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -102,18 +102,6 @@ img {max-width: 100%;}
 @media (min-width: 768px){
   .header {
     height: 20rem;
-  }
-}
-
-.header__text {
-  text-align: center;
-  color: var(--white);
-  margin: 3rem 0;
-}
-
-@media (min-width: 768px){
-  .header__text {
-    margin-top: 6rem;
   }
 }
 
@@ -153,6 +141,18 @@ img {max-width: 100%;}
   display: block;
   font-size: 1.25rem;
   color: var(--white);
+}
+
+.header__text {
+  text-align: center;
+  color: var(--white);
+  margin: 3rem 0;
+}
+
+@media (min-width: 768px){
+  .header__text {
+    margin-top: 6rem;
+  }
 }
 
 /* Blog */ 
